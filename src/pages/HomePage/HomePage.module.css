@@ -1,0 +1,42 @@
+.Home {
+  min-height: 100vh;
+  background: url(../../assets/images/bg.png);
+  background-size: 100%;
+  padding-bottom: 100px;
+}
+.hero {
+  min-height: 100vh;
+  background: url(../../assets/images/hero-ice.png);
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timerApes {
+  max-width: 703px;
+  width: 90%;
+}
+
+.timerCounts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background: linear-gradient(
+    46deg,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.08) 70.72%
+  );
+  box-shadow: inset -2px 3px 3px rgba(34, 255, 255, 0.1),
+    inset 2px -3px 3px rgba(232, 90, 255, 0.15);
+  border-radius: 16px;
+  padding: 24px 70px;
+  max-width: 794px;
+  width: 100%;
+}
