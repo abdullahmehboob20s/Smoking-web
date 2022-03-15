@@ -19,7 +19,8 @@ function HomePage() {
         <div className="mb-50px">
           <div className="container-wrapper">
             <h1 className="fs-64px white text-center uppercase weight-9 lh-1_4 mb-10px">
-              ThE First play to earn <span className="pink">cannaverse</span>
+              ThE First play to earn <br />{" "}
+              <span className="pink">cannaverse</span>
             </h1>
             <h5 className="sky-blue fs-24px text-center weight-9">
               Powered by Cactus Jack
