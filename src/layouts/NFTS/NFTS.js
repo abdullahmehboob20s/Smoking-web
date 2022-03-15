@@ -9,15 +9,8 @@ import collectionImg5 from "assets/images/collectionImg5.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import SwiperCore, { Navigation, EffectCoverflow, Autoplay } from "swiper";
+import CollectionCard from "components/Cards/CollectionCard/CollectionCard";
 SwiperCore.use([Navigation, EffectCoverflow]);
-
-const CollectionCard = ({ img }) => {
-  return (
-    <div className={styles.card}>
-      <img src={img} className="w-full block" alt="" />
-    </div>
-  );
-};
 
 function NFTS() {
   return (

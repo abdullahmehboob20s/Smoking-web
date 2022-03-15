@@ -4,32 +4,25 @@
   display: block;
 }
 
-.useLeaf {
-  display: flex;
-  align-items: center;
-  background: linear-gradient(
-    46deg,
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0.2) 70.72%
-  );
-  box-shadow: inset -7px 6px 6px rgba(152, 89, 36, 0.2),
-    inset 6px -6px 6px rgba(152, 89, 36, 0.2);
-  border-radius: 44px;
-  padding: 0.9em 1.2em;
-  position: absolute;
-  bottom: 4%;
-  left: 8%;
-}
-
-.useLeaf > img {
-  margin-right: 0.8em;
-  width: 2.4em;
-}
-
 .cards {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
+  position: relative;
+}
+
+.cards::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../assets/images/globe.png);
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: -1;
 }
 
 .islandCard {
@@ -46,4 +39,16 @@
     inset 2px -3px 3px rgba(152, 89, 36, 0.15);
   border-radius: 8px;
   padding: 48px 22px;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.btn {
+  position: absolute;
+  bottom: 4%;
+  left: 8%;
 }
