@@ -13,3 +13,11 @@
   height: 122px;
   border-radius: 50%;
 }
+
+@media (max-width: 1000px) {
+  .cardImg {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+  }
+}

@@ -665,3 +665,18 @@ li {
   border-radius: 32px;
   padding: 16px 22px;
 }
+
+@media (max-width: 1000px) {
+  .bg-btn-gradient {
+    padding: 14px 20px;
+  }
+
+  .mb-150px {
+    margin-bottom: 80px;
+  }
+
+  .container-wrapper-2 {
+    max-width: 1500px;
+    width: 90%;
+  }
+}

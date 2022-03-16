@@ -4,12 +4,15 @@ function Button({
   title,
   onClick,
   style,
-  className = "fs-16px uppercase weight-7",
+  className = " uppercase weight-7",
+  fontSize = "fs-16px",
+  type = "",
 }) {
   return (
     <button
       onClick={onClick}
-      className={`${className} bg-btn-gradient white pointer`}
+      type={type}
+      className={`${className} ${fontSize} bg-btn-gradient white pointer`}
       style={style}
     >
       {title}

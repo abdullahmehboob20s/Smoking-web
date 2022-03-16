@@ -3,6 +3,7 @@
   background: url(../../assets/images/bg.png);
   background-size: 100%;
   padding-bottom: 100px;
+  background-repeat: no-repeat;
 }
 .heroSection {
   min-height: 100vh;
@@ -10,4 +11,10 @@
   background-position: top right;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media (max-width: 760px) {
+  .heroSection {
+    background: none;
+  }
 }

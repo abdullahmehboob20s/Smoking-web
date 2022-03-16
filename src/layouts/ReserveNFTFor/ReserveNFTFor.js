@@ -8,17 +8,13 @@ import CollectionCard from "components/Cards/CollectionCard/CollectionCard";
 import reserveNftImg from "assets/images/reserveNftImg.png";
 import dollar_circle from "assets/images/dollar-circle.png";
 import islandCardImg1 from "assets/images/islandCardImg1.png";
-
-const Point = ({ title }) => {
-  return (
-    <div className={styles.point}>
-      <div className={styles.bullet}></div>
-      <p className="fs-16px white weight-5 lh-1_3">{title}</p>
-    </div>
-  );
-};
+import useMediaQuery from "hooks/useMediaQuery";
+import Point from "components/Point/Point";
 
 function ReserveNFTFor() {
+  const isBellow1200px = useMediaQuery("(max-width : 1200px)");
+  const isBellow500px = useMediaQuery("(max-width : 500px)");
+
   return (
     <div className="container-wrapper">
       <div className={styles.section}>
@@ -31,8 +27,11 @@ function ReserveNFTFor() {
                   FARM <span className="sky-blue">2000 LEEFCOIN</span> PER MONTH
                 </span>
               }
-              fontSize="fs-20px"
-              style={{ maxWidth: "350px", textAlign: "left" }}
+              fontSize={isBellow1200px ? "fs-18px" : "fs-20px"}
+              style={{
+                maxWidth: isBellow1200px ? "330px" : "350px",
+                textAlign: "left",
+              }}
             />
           </div>
           <div className={styles.nftImg}>
@@ -41,18 +40,43 @@ function ReserveNFTFor() {
           <img src={islandCardImg1} className={styles.islandCardImg1} alt="" />
         </div>
         <div className={styles.right}>
-          <h1 className="fs-48px white weight-9 lh-1_2 mb-30px">
+          <h1
+            className={`${
+              isBellow1200px ? "fs-32px" : "fs-48px"
+            }  white weight-9 lh-1_2 mb-30px`}
+          >
             RESERVE YOUR <span className="pink">SKC NFT</span> FOR
           </h1>
 
           <div className={`${styles.downDate} mb-35px`}>
-            <LeafButton icon={ethIcon} title="0.420 ETH" fontSize="fs-20px" />
+            <LeafButton
+              icon={ethIcon}
+              title="0.420 ETH"
+              fontSize={isBellow500px ? "fs-16px" : "fs-20px"}
+              style={{ padding: isBellow1200px && "12px 16px" }}
+              iconStyles={{
+                width: isBellow1200px && "35px",
+                height: isBellow1200px && "35px",
+              }}
+            />
 
             <div className={styles.sale}>
-              <img src={calendar} alt="" />
+              <img src={calendar} className={styles.calendar} alt="" />
               <div>
-                <p className="sky-blue fs-16px weight-9 mb-5px">END OF SALE</p>
-                <p className="fs-24px white weight-9">APRIL 14</p>
+                <p
+                  className={`sky-blue weight-9 mb-5px ${
+                    isBellow1200px ? "fs-12px" : "fs-16px"
+                  }`}
+                >
+                  END OF SALE
+                </p>
+                <p
+                  className={`${
+                    isBellow1200px ? "fs-16px" : "fs-24px"
+                  }  white weight-9`}
+                >
+                  APRIL 14
+                </p>
               </div>
             </div>
           </div>

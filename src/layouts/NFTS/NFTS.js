@@ -10,14 +10,22 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.css";
 import SwiperCore, { Navigation, EffectCoverflow, Autoplay } from "swiper";
 import CollectionCard from "components/Cards/CollectionCard/CollectionCard";
+import useMediaQuery from "hooks/useMediaQuery";
 SwiperCore.use([Navigation, EffectCoverflow]);
 
 function NFTS() {
+  const isBellow1000px = useMediaQuery("(max-width : 1000px)");
+
   return (
     <div>
       <div className="container-wrapper">
-        <h1 className="fs-40px white weight-7 text-center mb-80px uppercase">
-          <span className="pink">8420</span> smoking kongs nft
+        <h1
+          className={` white weight-7 text-center ${
+            isBellow1000px ? "mb-40px fs-24px lh-1_4" : "mb-80px fs-40px"
+          }  uppercase`}
+        >
+          <span className="pink">8420</span> smoking{" "}
+          {isBellow1000px ? <br /> : ""} kongs nft
         </h1>
       </div>
 
@@ -33,6 +41,18 @@ function NFTS() {
           stretch: 0,
           depth: 100,
           modifier: 2,
+        }}
+        breakpoints={{
+          760: {
+            slidesPerView: 3,
+          },
+          500: {
+            slidesPerView: 2,
+          },
+          200: {
+            slidesPerView: 1.5,
+            spaceBetween: 40,
+          },
         }}
       >
         <SwiperSlide>

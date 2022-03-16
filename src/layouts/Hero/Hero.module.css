@@ -26,3 +26,13 @@
   max-width: 794px;
   width: 100%;
 }
+
+@media (max-width: 500px) {
+  .timerCounts {
+    padding: 24px 24px;
+  }
+
+  .hero {
+    margin-top: 6%;
+  }
+}

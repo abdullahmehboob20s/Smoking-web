@@ -9,3 +9,12 @@
 .logo {
   width: 160px;
 }
+
+@media (max-width: 1000px) {
+  .navbar {
+    padding: 24px 0;
+  }
+  .logo {
+    width: 128px;
+  }
+}

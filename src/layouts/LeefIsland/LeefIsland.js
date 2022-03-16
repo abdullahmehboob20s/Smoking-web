@@ -8,12 +8,19 @@ import islandCardImg2 from "assets/images/islandCardImg2.png";
 import islandCardImg3 from "assets/images/islandCardImg3.png";
 import islandCardImg4 from "assets/images/islandCardImg4.png";
 import LeafButton from "components/LeafButton/LeafButton";
+import useMediaQuery from "hooks/useMediaQuery";
 
 const IslandCard = ({ img, title, imgStyles }) => {
+  const isBellow1000px = useMediaQuery("(max-width : 1000px)");
+
   return (
     <div className={styles.islandCard}>
       <img src={img} className="mb-40px" style={imgStyles} alt="" />
-      <p className="fs-24px white text-center weight-9 uppercase lh-1_4">
+      <p
+        className={`${
+          isBellow1000px ? "fs-20px" : "fs-24px"
+        }  white text-center weight-9 uppercase lh-1_4`}
+      >
         {title}
       </p>
     </div>
@@ -21,17 +28,29 @@ const IslandCard = ({ img, title, imgStyles }) => {
 };
 
 function LeefIsland() {
+  const isBellow1000px = useMediaQuery("(max-width : 1000px)");
+
   return (
     <div className="container-wrapper-2">
-      <div className="mb-50px">
-        <h1 className="text-center pink weight-9 fs-76px mb-10px uppercase">
+      <div className={`${isBellow1000px ? "mb-25px" : "mb-50px"}`}>
+        <h1
+          className={`text-center pink weight-9 mb-10px uppercase ${
+            isBellow1000px ? "fs-40px" : "fs-76px"
+          }`}
+        >
           LEEF ISLAND
         </h1>
-        <h3 className="fs-40px white weight-7 text-center mb-40px">
+        <h3
+          className={` ${
+            isBellow1000px ? "fs-24px mb-25px" : "fs-40px mb-40px"
+          } white weight-7 text-center `}
+        >
           GameS- ShopS - Events{" "}
         </h3>
         <p
-          className="white fs-24px weight-4 lh-1_4 text-center margin-center "
+          className={`white  ${
+            isBellow1000px ? "fs-16px" : "fs-24px"
+          } weight-4 lh-1_4 text-center margin-center`}
           style={{ maxWidth: "700px" }}
         >
           <span className="opacity-0_6">Enjoy a unique experience in the </span>
@@ -51,13 +70,17 @@ function LeefIsland() {
 
       <div className="relative mb-60px">
         <img src={leef_island} className={styles.leef_island} alt="" />
-        <div className={styles.btn}>
-          <LeafButton
-            icon={dollar_circle}
-            title="USE LEEFCOIN"
-            fontSize="fs-20px"
-          />
-        </div>
+        {isBellow1000px ? (
+          ""
+        ) : (
+          <div className={styles.btn}>
+            <LeafButton
+              icon={dollar_circle}
+              title="USE LEEFCOIN"
+              fontSize="fs-20px"
+            />
+          </div>
+        )}
       </div>
 
       <div className={`${styles.cards} mb-150px`}>
