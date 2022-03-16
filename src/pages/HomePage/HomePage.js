@@ -23,9 +23,9 @@ function HomePage() {
         <div className="mb-150px">
           <Hero />
         </div>
-        {/* <div className="mb-150px">
+        <div className="mb-150px">
           <NFTS />
-        </div> */}
+        </div>
         <div className="mb-150px">
           <LeefIsland />
         </div>
