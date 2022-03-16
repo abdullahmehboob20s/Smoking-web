@@ -5,6 +5,7 @@ import avatar2 from "assets/images/avatars/img2.png";
 import avatar3 from "assets/images/avatars/img3.png";
 import avatar4 from "assets/images/avatars/img4.png";
 import useMediaQuery from "hooks/useMediaQuery";
+import { Fade } from "react-awesome-reveal";
 
 const RoadmapCard = ({ points, title, img, isActive = false }) => {
   const isBellow1000px = useMediaQuery("(max-width : 1000px)");
@@ -49,46 +50,48 @@ const RoadmapCard = ({ points, title, img, isActive = false }) => {
 function Roadmap() {
   return (
     <div>
-      <div className="container-wrapper">
-        <h1 className="fs-48px white weight-9 mb-70px">Roadmap</h1>
-      </div>
+      <Fade cascade triggerOnce>
+        <div className="container-wrapper">
+          <h1 className="fs-48px white weight-9 mb-70px">Roadmap</h1>
+        </div>
 
-      <div className={styles.cards}>
-        <RoadmapCard
-          title="Q1- 2022"
-          img={avatar1}
-          points={[
-            "Launching",
-            "Partners reveal",
-            "Presale - Deposit to secure your Island in the LEEF",
-          ]}
-        />
-        <RoadmapCard
-          title="Q2 - 2022"
-          img={avatar2}
-          isActive={true}
-          points={[
-            "04/20 Official reveal date",
-            "$LEEF Coin  Pre-sale",
-            "$LEEF Coin - Public sale",
-          ]}
-        />
-        <RoadmapCard
-          title="Q3- 2022"
-          img={avatar3}
-          points={[
-            "Alpha release of the LEEF Island with shops, lands , and events available.",
-          ]}
-        />
-        <RoadmapCard
-          title="Q4- 2022"
-          img={avatar4}
-          points={[
-            "Beta Release of the LEEF Island",
-            "First LEEF Exhibition , open to public and professionals all around the world",
-          ]}
-        />
-      </div>
+        <div className={styles.cards}>
+          <RoadmapCard
+            title="Q1- 2022"
+            img={avatar1}
+            points={[
+              "Launching",
+              "Partners reveal",
+              "Presale - Deposit to secure your Island in the LEEF",
+            ]}
+          />
+          <RoadmapCard
+            title="Q2 - 2022"
+            img={avatar2}
+            isActive={true}
+            points={[
+              "04/20 Official reveal date",
+              "$LEEF Coin  Pre-sale",
+              "$LEEF Coin - Public sale",
+            ]}
+          />
+          <RoadmapCard
+            title="Q3- 2022"
+            img={avatar3}
+            points={[
+              "Alpha release of the LEEF Island with shops, lands , and events available.",
+            ]}
+          />
+          <RoadmapCard
+            title="Q4- 2022"
+            img={avatar4}
+            points={[
+              "Beta Release of the LEEF Island",
+              "First LEEF Exhibition , open to public and professionals all around the world",
+            ]}
+          />
+        </div>
+      </Fade>
     </div>
   );
 }

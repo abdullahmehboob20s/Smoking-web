@@ -1,5 +1,6 @@
 import SKCNFT from "components/Modals/SKCNFT/SKCNFT";
 import Family from "layouts/Family/Family";
+import FAQ from "layouts/FAQ/FAQ";
 import Footer from "layouts/Footer/Footer";
 import Hero from "layouts/Hero/Hero";
 import JoinCommunity from "layouts/JoinCommunity/JoinCommunity";
@@ -38,8 +39,11 @@ function HomePage() {
         <div className="mb-150px">
           <OfficialPartners />
         </div>
-        <div className="mb-200px">
+        <div className="mb-150px">
           <ReserveNFTFor />
+        </div>
+        <div className="mb-200px">
+          <FAQ />
         </div>
         <div className="mb-150px">
           <JoinCommunity />

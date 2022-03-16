@@ -11,6 +11,7 @@ function useCountdownTimer({ providedDate }) {
 
   const startTimer = () => {
     const countdownDate = new Date(deadline).getTime();
+
     interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = countdownDate - now;

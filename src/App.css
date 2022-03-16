@@ -592,6 +592,12 @@ a {
 .text-center {
   text-align: center;
 }
+.text-right {
+  text-align: right;
+}
+.text-left {
+  text-align: left;
+}
 
 button {
   border: none;
@@ -664,6 +670,10 @@ li {
   background: linear-gradient(91.33deg, #a764d8 1.28%, #5f9efb 99.29%);
   border-radius: 32px;
   padding: 16px 22px;
+}
+
+.opacity-hover-effect:hover {
+  opacity: 0.9;
 }
 
 @media (max-width: 1000px) {

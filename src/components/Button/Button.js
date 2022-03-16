@@ -12,7 +12,7 @@ function Button({
     <button
       onClick={onClick}
       type={type}
-      className={`${className} ${fontSize} bg-btn-gradient white pointer`}
+      className={`${className} ${fontSize} opacity-hover-effect bg-btn-gradient white pointer`}
       style={style}
     >
       {title}

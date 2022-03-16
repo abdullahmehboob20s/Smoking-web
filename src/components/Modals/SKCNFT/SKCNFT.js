@@ -69,6 +69,7 @@ function SKCNFT() {
                         isBellow1000px ? "fs-24px" : "fs-24px"
                       }  white weight-7 mb-5px text-center`}
                     >
+                      {days < 10 ? "0" : ""}
                       {days}
                     </h1>
                     <p
@@ -85,6 +86,7 @@ function SKCNFT() {
                         isBellow1000px ? "fs-24px" : "fs-24px"
                       }  white weight-7 mb-5px text-center`}
                     >
+                      {hours < 10 ? "0" : ""}
                       {hours}
                     </h1>
                     <p
@@ -101,6 +103,7 @@ function SKCNFT() {
                         isBellow1000px ? "fs-24px" : "fs-24px"
                       }  white weight-7 mb-5px text-center`}
                     >
+                      {minutes < 10 ? "0" : ""}
                       {minutes}
                     </h1>
                     <p
@@ -117,6 +120,7 @@ function SKCNFT() {
                         isBellow1000px ? "fs-24px" : "fs-24px"
                       }  white weight-7 mb-5px text-center`}
                     >
+                      {seconds < 10 ? "0" : ""}
                       {seconds}
                     </h1>
                     <p
