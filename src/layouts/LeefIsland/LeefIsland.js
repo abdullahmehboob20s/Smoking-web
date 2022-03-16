@@ -9,21 +9,30 @@ import islandCardImg3 from "assets/images/islandCardImg3.png";
 import islandCardImg4 from "assets/images/islandCardImg4.png";
 import LeafButton from "components/LeafButton/LeafButton";
 import useMediaQuery from "hooks/useMediaQuery";
+import Tilt from "react-parallax-tilt";
 
 const IslandCard = ({ img, title, imgStyles }) => {
   const isBellow1000px = useMediaQuery("(max-width : 1000px)");
 
   return (
-    <div className={styles.islandCard}>
-      <img src={img} className="mb-40px" style={imgStyles} alt="" />
-      <p
-        className={`${
-          isBellow1000px ? "fs-20px" : "fs-24px"
-        }  white text-center weight-9 uppercase lh-1_4`}
-      >
-        {title}
-      </p>
-    </div>
+    <Tilt
+      glareEnable={true}
+      glareMaxOpacity={0.3}
+      glareColor="lightblue"
+      glarePosition="all"
+      style={{ borderRadius: "inherit" }}
+    >
+      <div className={styles.islandCard}>
+        <img src={img} className="mb-40px" style={imgStyles} alt="" />
+        <p
+          className={`${
+            isBellow1000px ? "fs-20px" : "fs-24px"
+          }  white text-center weight-9 uppercase lh-1_4`}
+        >
+          {title}
+        </p>
+      </div>
+    </Tilt>
   );
 };
 
