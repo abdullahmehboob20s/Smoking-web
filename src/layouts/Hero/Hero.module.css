@@ -27,6 +27,12 @@
   width: 100%;
 }
 
+.poweredBy {
+  width: 60%;
+  margin: 0 auto;
+  display: block;
+}
+
 @media (max-width: 500px) {
   .timerCounts {
     padding: 24px 24px;
@@ -34,5 +40,11 @@
 
   .hero {
     margin-top: 6%;
+  }
+
+  .poweredBy {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
   }
 }
