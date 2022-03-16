@@ -22,6 +22,7 @@ const IslandCard = ({ img, title, imgStyles }) => {
       glareColor="lightblue"
       glarePosition="all"
       style={{ borderRadius: "inherit" }}
+      className={styles.islandCardWrapper}
     >
       <div className={styles.islandCard}>
         <img src={img} className="mb-40px" style={imgStyles} alt="" />

@@ -12,7 +12,7 @@ import SwiperCore, { Navigation, EffectCoverflow, Autoplay } from "swiper";
 import CollectionCard from "components/Cards/CollectionCard/CollectionCard";
 import useMediaQuery from "hooks/useMediaQuery";
 import { Fade } from "react-awesome-reveal";
-SwiperCore.use([Navigation, EffectCoverflow]);
+SwiperCore.use([Navigation, EffectCoverflow, Autoplay]);
 
 function NFTS() {
   const isBellow1000px = useMediaQuery("(max-width : 1000px)");
@@ -37,6 +37,10 @@ function NFTS() {
           spaceBetween={50}
           effect={"coverflow"}
           centeredSlides={true}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
           loop={true}
           coverflowEffect={{
             rotate: 0,
