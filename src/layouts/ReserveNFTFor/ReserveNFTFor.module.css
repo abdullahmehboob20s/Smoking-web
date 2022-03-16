@@ -8,7 +8,7 @@
   width: fit-content;
 }
 .right {
-  max-width: 518px;
+  max-width: 518px !important;
   width: 100%;
   position: relative;
   border-radius: 8px;
